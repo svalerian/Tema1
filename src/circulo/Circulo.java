@@ -27,7 +27,7 @@ public class Circulo {
 
     public Circulo(Circulo c){
         centro = new Punto(c.getCentro());
-        radio = c.getCentro();
+        radio = c.getRadio();
     }
 
     public Punto getCentro(){
@@ -61,7 +61,7 @@ public class Circulo {
         getCentro().setY(getCentro().getY() + b);
     }
 
-    public boolean sonIguales(){
+    public boolean sonIguales(Circulo c){
         return ((getRadio() == c.getRadio()) && (getCentro().sonIguales(c.getCentro())));
     }
 
